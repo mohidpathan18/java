@@ -8,47 +8,33 @@ public class CollectionsAndMathDemo {
 
         Scanner input = new Scanner(System.in);
 
-        // ================= LIST =================
         System.out.println("----- LIST (Numbers) -----");
-
         List<Double> numbers = new ArrayList<>();
-
         System.out.println("Enter 5 numbers:");
         for (int i = 0; i < 5; i++) {
             numbers.add(input.nextDouble());
         }
-
         System.out.println("List: " + numbers);
-
         double sum = 0;
         for (double num : numbers) {
             sum += num;
         }
-
         System.out.println("Sum: " + sum);
         System.out.println("Average: " + (sum / numbers.size()));
-
         System.out.println("Min: " + Collections.min(numbers));
         System.out.println("Max: " + Collections.max(numbers));
-
         System.out.print("Enter number to remove: ");
         double removeNum = input.nextDouble();
-
         numbers.remove(removeNum);
         System.out.println("Updated List: " + numbers);
-
         sum = 0;
         for (double num : numbers) {
             sum += num;
         }
-
         System.out.println("New Sum: " + sum);
         System.out.println("New Average: " + (sum / numbers.size()));
-
         numbers.clear();
         System.out.println("List cleared");
-
-
         // ================= SET =================
         System.out.println("\n----- SET (Unique Numbers) -----");
 
@@ -58,14 +44,12 @@ public class CollectionsAndMathDemo {
         for (int i = 0; i < 5; i++) {
             set.add(input.nextInt());
         }
-
         System.out.println("Set: " + set);
 
         int sumSet = 0;
         for (int num : set) {
             sumSet += num;
         }
-
         System.out.println("Sum: " + sumSet);
 
         Set<Integer> squared = new HashSet<>();
@@ -82,7 +66,6 @@ public class CollectionsAndMathDemo {
         System.out.println("Updated Set: " + set);
 
 
-        // ================= MAP =================
         System.out.println("\n----- MAP (Product Scores) -----");
 
         Map<String, Double> map = new HashMap<>();
